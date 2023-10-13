@@ -1,0 +1,48 @@
+.scale-up-ver-center {
+	-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  @keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+
+  .bgProduct{
+    background-image: url("../bf.png");
+    background-repeat: no-repeat;
+    background-position:  right -24% top -100%;
+    background-size: 30%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  div{ 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+ 
+  .bgProduct footer{
+    position:static; 
+  }
+
+ .vare {
+    flex-grow: 1;
+  }
+

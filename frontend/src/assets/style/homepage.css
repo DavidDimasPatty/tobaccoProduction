@@ -1,0 +1,64 @@
+.scale-up-ver-center {
+	-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  @keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+#titleHomePage{
+    font-size:50px;
+    font-weight: 100px;
+    font-family: ui-sans-serif;
+    }
+
+  .underline{
+    width: 5%;
+    border-bottom: 2px solid black;
+  }  
+
+  
+.judul{
+  font-size:36px;
+  font-weight: 50px;
+  font-family: ui-sans-serif;
+  }
+
+  .text{
+    font-family: serif;
+  }
+
+.bgHome {
+    position: absolute;
+    background-image: url("../bf.png"),url("../bf.png");
+    background-repeat: no-repeat;
+    background-position: right -24% top -25%,left -20% top 135%;
+    background-size: 30%;
+}
+
+img { background: transparent; }
+
+.text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8; /* number of lines to show */
+          line-clamp: 8; 
+  -webkit-box-orient: vertical;
+}

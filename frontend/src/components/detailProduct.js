@@ -38,6 +38,7 @@ const DetailProduct = () => {
         }
       )
       .then((res) => {
+        console.log(id);
         console.log(res.data);
         setDataProduct(res.data[0]);
         setDataProductCategories(res.data[1]);

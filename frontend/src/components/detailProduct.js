@@ -38,6 +38,7 @@ const DetailProduct = () => {
         }
       )
       .then((res) => {
+        console.log(process.env.REACT_APP_DEV_PRODUCTION)
         console.log(id);
         console.log(res.data);
         setDataProduct(res.data[0]);

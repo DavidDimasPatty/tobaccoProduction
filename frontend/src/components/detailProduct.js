@@ -38,7 +38,6 @@ const DetailProduct = () => {
         }
       )
       .then((res) => {
-        console.log(res.data[1][0]);
         setDataProduct(res.data[0]);
         setDataProductCategories(res.data[1]);
         setIsLoading(false);

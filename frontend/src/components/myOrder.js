@@ -14,7 +14,7 @@ const MyOrder = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const devEnv = process.env.NODE_ENV !== "production";
-  const { REACT_APP_DEV_URL, REACT_APP_DEV_PRODUCTION } = process.env;
+  const { REACT_APP_DEV_URL, REACT_APP_PROD_URL } = process.env;
 
   useEffect(() => {
     getAllOrder();
@@ -26,7 +26,7 @@ const MyOrder = () => {
         `${
           devEnv
             ? process.env.REACT_APP_DEV_URL
-            : process.env.REACT_APP_DEV_PRODUCTION
+            : process.env.REACT_APP_PROD_URL
         }/getAllOrder`,
         {
           params: {

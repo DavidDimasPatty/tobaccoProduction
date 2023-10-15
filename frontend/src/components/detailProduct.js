@@ -17,7 +17,7 @@ const DetailProduct = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const devEnv = process.env.NODE_ENV !== "production";
-  const { REACT_APP_DEV_URL, REACT_APP_DEV_PRODUCTION } = process.env;
+  const { REACT_APP_DEV_URL, REACT_APP_PROD_URL } = process.env;
 
   useEffect(() => {
     getDataProductCategories();
@@ -29,7 +29,7 @@ const DetailProduct = () => {
         `${
           devEnv
             ? process.env.REACT_APP_DEV_URL
-            : process.env.REACT_APP_DEV_PRODUCTION
+            : process.env.REACT_APP_PROD_URL
         }/getProductCategories`,
         {
           params: {
@@ -38,7 +38,7 @@ const DetailProduct = () => {
         }
       )
       .then((res) => {
-        console.log(process.env.REACT_APP_DEV_PRODUCTION)
+        console.log(process.env.REACT_APP_PROD_URL)
         console.log(id);
         console.log(res.data);
         setDataProduct(res.data[0]);

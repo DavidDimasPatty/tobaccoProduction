@@ -16,7 +16,7 @@ const DetailProduct = () => {
   const [dataProductCategories, setDataProductCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const devEnv = process.env.NODE_ENV != "production";
+  const devEnv = process.env.NODE_ENV !== "production";
   const { REACT_APP_DEV_URL, REACT_APP_DEV_PRODUCTION } = process.env;
 
   useEffect(() => {

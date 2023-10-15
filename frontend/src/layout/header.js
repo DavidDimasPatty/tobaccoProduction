@@ -10,7 +10,7 @@ import Row from "react-bootstrap/Row";
 import { Card, Button, Modal, Form, InputGroup, Toast } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
 import "../assets/style/header.css";
-import '../assets/style/all.css'
+import "../assets/style/all.css";
 const Header = () => {
   //modal offset variabel
   const [show, setShow] = useState(false);
@@ -89,11 +89,13 @@ const Header = () => {
         }
       )
       .then((res) => {
-        localStorage.setItem("user", res.data[0].name);
-        localStorage.setItem("idUser", res.data[0]._id);
-        document.getElementById("loginLink").style.display = "none";
-        document.getElementById("halouser").style.display = "";
-        setShowModal(false);
+        if (res.data.length != 0) {
+          localStorage.setItem("user", res.data[0].name);
+          localStorage.setItem("idUser", res.data[0]._id);
+          document.getElementById("loginLink").style.display = "none";
+          document.getElementById("halouser").style.display = "";
+          setShowModal(false);
+        }
       });
   };
 
@@ -204,7 +206,13 @@ const Header = () => {
   }, []);
 
   return (
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top" className="allItem">
+    <Navbar
+      expand="lg"
+      bg="dark"
+      data-bs-theme="dark"
+      sticky="top"
+      className="allItem"
+    >
       <Navbar.Brand href="/" style={{ color: "white" }} className="ms-5">
         Tobacco
       </Navbar.Brand>
